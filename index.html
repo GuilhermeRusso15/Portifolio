@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Guilherme Pinheiro Russo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e6ed;
+            margin-bottom: 30px;
+        }
+        .profile-pic-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px auto;
+            border: 4px solid #4a90e2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+        header .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-top: 5px;
+            display: block;
+        }
+        .github-link {
+            margin-top: 10px;
+        }
+        .github-link a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .github-link a:hover {
+            color: #4a90e2;
+        }
+        section {
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        section h2 {
+            color: #4a90e2;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .bio p {
+            color: #555;
+            font-size: 1.05em;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills li {
+            background: #e9f2fb;
+            color: #4a90e2;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .skills li:hover {
+            transform: translateY(-3px);
+        }
+        .skills li::before {
+            content: '💻';
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+        /* Estilo da Seção de Projetos */
+        .project-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .project-item {
+            background: #f8fbfc;
+            padding: 15px;
+            border-left: 4px solid #4a90e2;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        }
+        .project-item h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        .project-item p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .project-item a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-item a:hover {
+            text-decoration: underline;
+        }
+        /* Responsividade básica para projetos em telas maiores */
+        @media (min-width: 600px) {
+            .project-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Estilos do Formulário de Contato */
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; /* Inclui padding e borda na largura total */
+            font-family: inherit;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-form button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            display: block;
+            margin: 0 auto;
+        }
+        .contact-form button:hover {
+            background-color: #357ABD;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #e0e6ed;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-pic-container">
+                <img src="gr.jpg" alt="Foto de Perfil de Guilherme Pinheiro Russo">
+            </div>
+            <h1>Guilherme Pinheiro Russo</h1>
+            <span class="subtitle">Desenvolvedor Front-end & Especialista em Licitações Públicas</span>
+            <div class="github-link">
+                
+            </div>
+        </header>
+
+        <section class="bio">
+            <h2>Sobre Mim</h2>
+            <p>
+                Nascido em 03/11/2000, sou um profissional multifacetado com uma sólida trajetória. Sou Cabo há 7 anos, período no qual desenvolvi forte disciplina e adquiri vasta experiência em Licitações Públicas e processos administrativos, aprimorando minha capacidade de análise e organização. Paralelamente, dedico-me ao desenvolvimento Front-end, buscando aplicar meu foco e atenção aos detalhes na criação de interfaces de usuário intuitivas e eficientes.
+            </p>
+        </section>
+
+        <section class="skills">
+            <h2>Minhas Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <p style="font-size: 0.85em; color: #7f8c8d; margin-top: 15px;">
+                
+            </p>
+        </section>
+        
+        <section class="projects">
+            <h2>Meus Projetos Recentes</h2>
+            <div class="project-list">
+
+                <div class="project-item">
+                    <h3>Atividade-blog-noticias</h3>
+                    <p>Criação de um layout e estrutura funcional para um blog ou portal de notícias, utilizando práticas modernas de HTML e CSS.</p>
+                    <a href="https://github.com/GuilhermeRusso15/Atividade-blog-noticias" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>atividade-layout</h3>
+                    <p>Focado na construção de diferentes tipos de layouts web, demonstrando proficiência em organização e estrutura visual.</p>
+                    <a href="https://github.com/GuilhermeRusso15/atividade-layout" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>exercicios-javascript</h3>
+                    <p>Coleção de exercícios práticos em JavaScript, demonstrando lógica de programação e manipulação da DOM para interatividade.</p>
+                    <a href="https://github.com/GuilhermeRusso15/exercicios-javascript" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>batalhanaval</h3>
+                    <p>Implementação do clássico jogo Batalha Naval, utilizando JavaScript para a lógica de jogo e interface.</p>
+                    <a href="https://github.com/GuilhermeRusso15/batalhanaval" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>atividade-flexbox</h3>
+                    <p>Exploração e aplicação do módulo CSS Flexbox para criar layouts responsivos e alinhados de forma eficiente.</p>
+                    <a href="https://github.com/GuilhermeRusso15/atividade-flexbox" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>formularios</h3>
+                    <p>Desenvolvimento e estilização de formulários web, cobrindo validação, acessibilidade e diferentes tipos de input.</p>
+                    <a href="https://github.com/GuilhermeRusso15/formularios" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>SistemaQualidadeProdutividade</h3>
+                    <p>Projeto focado em sistemas de gestão, possivelmente uma interface de acompanhamento de qualidade ou produtividade.</p>
+                    <a href="https://github.com/GuilhermeRusso15/SistemaQualidadeProdutividade" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>JogoVelha</h3>
+                    <p>Criação do popular Jogo da Velha (Tic-Tac-Toe), ideal para praticar a manipulação de estados e a lógica de vitória em JavaScript.</p>
+                    <a href="https://github.com/GuilhermeRusso15/JogoVelha" target="_blank">Ver Projeto</a>
+                </div>
+                
+            </div>
+            <div style="text-align: center; margin-top: 25px;">
+                 <a href="https://github.com/GuilhermeRusso15" target="_blank" style="text-decoration: none; color: #4a90e2; font-weight: bold; font-size: 1.1em;">
+                     <i class="fab fa-github"></i> Veja todos os meus repositórios no GitHub!
+                 </a>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Entre em Contato</h2>
+            <form class="contact-form" action="mailto:seu.email@exemplo.com" method="POST" enctype="text/plain">
+                <div>
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" name="Nome" required>
+                </div>
+                <div>
+                    <label for="email">Seu Email:</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+                <div>
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="Mensagem" required></textarea>
+                </div>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                </button>
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 2025 Guilherme Pinheiro Russo. SENAI - Programação Front End</p>
+        </footer>
+    </div>
+</body>
+</html>
